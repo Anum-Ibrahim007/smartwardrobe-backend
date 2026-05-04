@@ -7,8 +7,8 @@ require('./db'); // add this line
 const app = express();
 
 app.use(cors({
-  origin: '*', // Allows all origins (good for development)
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  origin: ['https://glowing-sunburst-cf792a.netlify.app', 'http://localhost:5000'],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json({ limit: '10mb' })); // 10mb needed for base64 images
